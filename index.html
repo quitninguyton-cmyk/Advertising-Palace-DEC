@@ -1,1 +1,187 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Advertising Palace 👑</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="#" class="logo">👑 ADVERTISING PALACE</a>
+  <button id="menuToggle">☰</button>
+  <nav id="navigation">
+    <a href="#home">Home</a>
+    <a href="#explore">Explore</a>
+    <a href="#advertise">Advertise</a>
+    <a href="#announcements">News</a>
+    <a href="#applications">Applications</a>
+    <a href="https://discord.gg/advpal" target="_blank">Discord ↗</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <span class="tag">👑 THE ULTIMATE ADVERTISING COMMUNITY</span>
+    <h1>WELCOME TO THE <span>PALACE.</span></h1>
+    <p>Discover communities, promote your Discord server and make new connections!</p>
+    <a class="btn" href="https://discord.gg/advpal" target="_blank">JOIN OUR DISCORD ↗</a>
+    <a class="btn secondary" href="#explore">EXPLORE SERVERS ↓</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>WHY <span>ADVERTISING PALACE?</span></h2>
+  <div class="cards">
+    <article class="card">
+      <h3>📢 Advertise</h3>
+      <p>Promote your Discord server to new audiences.</p>
+    </article>
+    <article class="card">
+      <h3>🔎 Discover</h3>
+      <p>Find exciting communities to join.</p>
+    </article>
+    <article class="card">
+      <h3>🤝 Partnerships</h3>
+      <p>Connect with other server owners.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="explore">
+  <h2>EXPLORE THE <span>PALACE.</span></h2>
+  <p>Find your next favorite community.</p>
+
+  <div class="search-tools">
+    <input id="searchInput" placeholder="Search servers...">
+    <select id="categoryFilter">
+      <option value="all">All categories</option>
+      <option>Gaming</option>
+      <option>Community</option>
+      <option>Content Creator</option>
+      <option>Advertising</option>
+      <option>Trading</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <div id="directoryStatus"></div>
+  <div id="serverGrid" class="cards"></div>
+  <div id="emptyState" hidden>No servers found. Try another search!</div>
+</section>
+
+<section class="section" id="advertise">
+  <h2>ADVERTISE YOUR <span>SERVER.</span></h2>
+  <p>Submit your community and get discovered!</p>
+
+  <form id="adForm" class="form">
+    <label>Server Name</label>
+    <input name="server_name" required maxlength="60" placeholder="Your server name">
+
+    <label>Description</label>
+    <textarea name="description" required maxlength="1000" placeholder="Tell us about your server..."></textarea>
+
+    <label>Discord Invite Link</label>
+    <input name="invite_link" required placeholder="https://discord.gg/example">
+
+    <label>Owner Name</label>
+    <input name="owner_name" required maxlength="60" placeholder="Your Discord username">
+
+    <label>Category</label>
+    <select name="category" required>
+      <option>Gaming</option>
+      <option>Community</option>
+      <option>Content Creator</option>
+      <option>Advertising</option>
+      <option>Trading</option>
+      <option>Other</option>
+    </select>
+
+    <button class="btn" type="submit">SUBMIT ADVERTISEMENT →</button>
+  </form>
+</section>
+
+<section class="section" id="announcements">
+  <h2>PALACE <span>ANNOUNCEMENTS.</span></h2>
+  <div id="announcementList" class="cards">
+    <p>Loading announcements...</p>
+  </div>
+</section>
+
+<section class="section" id="applications">
+  <h2>JOIN THE <span>TEAM.</span></h2>
+  <div class="cards">
+    <article class="card">
+      <h3>🛡️ Staff Application</h3>
+      <p>Help us manage and improve Advertising Palace.</p>
+      <button class="btn application-button" data-type="Staff">APPLY NOW</button>
+    </article>
+
+    <article class="card">
+      <h3>🤝 Partnership Application</h3>
+      <p>Interested in partnering with our community?</p>
+      <button class="btn application-button" data-type="Partnership">APPLY NOW</button>
+    </article>
+  </div>
+
+  <form id="applicationForm" class="form">
+    <h3 id="applicationTitle">Application Form</h3>
+    <input type="hidden" name="application_type" value="Staff">
+
+    <label>Your Name</label>
+    <input name="applicant_name" required maxlength="60" placeholder="Your name">
+
+    <label>Discord Username or Contact</label>
+    <input name="contact" required maxlength="200" placeholder="Your Discord username">
+
+    <label>Why are you applying?</label>
+    <textarea name="answers" required maxlength="5000" placeholder="Tell us about yourself..."></textarea>
+
+    <button class="btn" type="submit">SEND APPLICATION →</button>
+  </form>
+</section>
+
+<section class="section" id="rules">
+  <h2>PALACE <span>RULES.</span></h2>
+  <div class="cards">
+    <article class="card"><h3>01. Respect</h3><p>Respect all members and staff.</p></article>
+    <article class="card"><h3>02. No Scams</h3><p>No fake promotions or fraudulent links.</p></article>
+    <article class="card"><h3>03. No Spam</h3><p>Do not submit duplicate advertisements.</p></article>
+    <article class="card"><h3>04. Appropriate Content</h3><p>Keep advertisements safe and appropriate.</p></article>
+    <article class="card"><h3>05. Correct Categories</h3><p>Choose the right category for your server.</p></article>
+    <article class="card"><h3>06. Follow Discord Rules</h3><p>Follow Discord's Terms of Service.</p></article>
+  </div>
+</section>
+
+<section class="section final-cta">
+  <h2>WELCOME TO YOUR <span>PALACE.</span></h2>
+  <p>Come grow with our community!</p>
+  <a class="btn" href="https://discord.gg/advpal" target="_blank">JOIN ADVERTISING PALACE ↗</a>
+</section>
+
+<section class="section">
+  <details>
+    <summary>⚙️ Admin Access</summary>
+    <p>Admin tools will be added after secure authentication is configured.</p>
+    <a href="https://supabase.com/dashboard" target="_blank">Open Supabase Dashboard ↗</a>
+  </details>
+</section>
+
+</main>
+
+<footer>
+  <h3>👑 ADVERTISING PALACE</h3>
+  <p>Discover. Advertise. Connect.</p>
+  <a href="https://discord.gg/advpal" target="_blank">Join our Discord</a>
+  <p>© <span id="year"></span> Advertising Palace</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
