@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advertising Palace | Community Chat</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #100d1c;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      padding: 22px;
+      background: #201536;
+      text-align: center;
+    }
+    header a { color: #c9a7ff; }
+    main { max-width: 800px; margin: auto; padding: 20px; }
+    .panel {
+      background: #211a32;
+      border: 1px solid #45345e;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+    input, button {
+      width: 100%;
+      padding: 13px;
+      margin: 7px 0;
+      border-radius: 8px;
+      border: 0;
+      font-size: 15px;
+    }
+    input { background: #332747; color: white; }
+    button {
+      background: #9255ed;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:disabled { opacity: .5; cursor: not-allowed; }
+    #messages {
+      height: 350px;
+      overflow-y: auto;
+      background: #171123;
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .message {
+      padding: 10px;
+      margin-bottom: 9px;
+      background: #302442;
+      border-radius: 9px;
+      overflow-wrap: anywhere;
+    }
+    .message strong { color: #c9a7ff; }
+    .muted { color: #b6a9c8; font-size: 13px; }
+    #chatSection, #accountSection { display: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>💬 Advertising Palace</h1>
+  <p>Meet members. Make friends. Have fun.</p>
+  <a href="index.html">← Back to Home</a>
+</header>
+
+<main>
+  <section id="accountSection" class="panel">
+    <h2>Welcome to the Community!</h2>
+    <p>Create an account or log in to join the conversation.</p>
+
+    <form id="signupForm">
+      <h3>Create Account</h3>
+      <input id="signupUsername" maxlength="24" placeholder="Choose a username" required>
+      <input id="signupEmail" type="email" placeholder="Email address" required>
+      <input id="signupPassword" type="password" minlength="8" placeholder="Password (8+ characters)" required>
+      <button type="submit">Create Account</button>
+    </form>
+
+    <hr>
+
+    <form id="loginForm">
+      <h3>Already a Member?</h3>
+      <input id="loginEmail" type="email" placeholder="Email address" required>
+      <input id="loginPassword" type="password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+    </form>
+
+    <p id="accountStatus" class="muted" role="status"></p>
+  </section>
+
+  <section id="chatSection" class="panel">
+    <h2>🌟 Community Chat</h2>
+    <p id="welcomeText" class="muted"></p>
+
+    <div id="messages" aria-live="polite"></div>
+
+    <form id="messageForm">
+      <input id="messageInput" maxlength="500" placeholder="Write a message..." required>
+      <button id="sendButton" type="submit">Send Message</button>
+    </form>
+
+    <button id="logoutButton" type="button">Log Out</button>
+    <p id="chatStatus" class="muted" role="status"></p>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="chat.js"></script>
+</body>
+</html>
